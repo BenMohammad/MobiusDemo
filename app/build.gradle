@@ -1,0 +1,48 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "28.0.1"
+    defaultConfig {
+        applicationId "com.fukuni.mobiusdemo"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    implementation 'com.spotify.mobius:mobius-core:1.2.0'
+    implementation 'com.spotify.mobius:mobius-android:1.2.0'
+    implementation 'com.spotify.mobius:mobius-extras:1.2.0'
+    implementation 'com.spotify.mobius:mobius-rx2:1.2.0'
+
+    // Arrow
+    implementation "io.arrow-kt:arrow-core:0.8.2"
+
+    // RxJava
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+
+
+}
