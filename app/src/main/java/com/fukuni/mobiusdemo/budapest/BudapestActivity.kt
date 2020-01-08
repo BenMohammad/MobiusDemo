@@ -54,7 +54,6 @@ class BudapestActivity: BaseActivity<BudapestModel, BudapestEvent, Nothing>(), B
                 eventSource.notifyEvent(eventToSend)
 
             }
-
         })
     }
 }
